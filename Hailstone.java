@@ -46,20 +46,20 @@ public class Hailstone
 
     while(counter1 <= num2)
     {
-      while(num1 >= 1)
+      while(num1 > 1)
       {
         if(num1 % 2 == 0 && num1 != 1)
         {
           num1 = num1 / 2;
           iteration++; 
         }
-        if(num1 % 2 == 1 && num1 != 1)
+        else if(num1 % 2 == 1 && num1 != 1)
         {
           num1 = (3 * num1) + 1;
           iteration++;
         }
       }
-      if(iteration > maxIteration)
+      if(iteration >= maxIteration)
       {
       maxIteration = iteration;
       maxNumber = counter1;
@@ -69,6 +69,6 @@ public class Hailstone
       num1 = counter1;
     }
 
-    System.out.println("The number " + maxNumber + " has the longest cycle length of " + maxIteration);
+    System.out.println("\nThe number " + maxNumber + " has the longest cycle length of " + maxIteration + ".");
   }
 }
